@@ -5,7 +5,8 @@ from chardet.universaldetector import UniversalDetector
 
 
 class GetEncoding:
-    def __init__(self, unknown_file_path, convert=False, known_encoding=None, known_file_path=None):
+    def __init__(self, unknown_file_path, convert=False,
+                 known_encoding=None, known_file_path=None):
         """
         Helper Class to dynamically determine enconding of an unknown file.
         If convert is True, the class will also convert the file to the provided
@@ -51,3 +52,4 @@ class GetEncoding:
             except (UnicodeDecodeError, UnicodeEncodeError, Exception) as e:
                 print(e)
                 return None
+
